@@ -1,0 +1,129 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: local("Gotham Pro Bold"), local("Gotham-Pro-Bold"), url("../GothamPro-Bold.woff2") format("woff2"), url("../GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Bold"), local("PF-Encore-Sans-Pro-Bold"), url("PFEncoreSansPro-Bold.woff2") format("woff2"), url("PFEncoreSansPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Medium"), local("PF-Encore-Sans-Pro-Medium"), url("PFEncoreSansPro-Medium.woff2") format("woff2"), url("PFEncoreSansPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Thin"), local("PF-Encore-Sans-Pro-Thin"), url("PFEncoreSansPro-Thin.woff2") format("woff2"), url("PFEncoreSansPro-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  font-family: "PF Encore Sans Pro", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 24px;
+  color: #9e9898;
+}
+
+.h3 {
+  font-family: "PF Encore Sans Pro", sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 24px;
+  color: #fc635e;
+}
+.h3 span {
+  color: #868686;
+}
+
+/* HEADER START */
+/* HEADER END */
+/* MAIN START */
+/* MAIN END */
+/* FOOTER START */
+/* FOOTER END */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* Laptops */
+/* Tablets, Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Phones */
+/* Extra Small Devices, old Phones */

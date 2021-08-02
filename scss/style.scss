@@ -1,0 +1,109 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;  
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+// FONTS
+@font-face {
+    font-family: 'Gotham Pro';
+    src: local('Gotham Pro Bold'), local('Gotham-Pro-Bold'),
+        url('../GothamPro-Bold.woff2') format('woff2'),
+        url('../GothamPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PF Encore Sans Pro';
+    src: local('PF Encore Sans Pro Bold'), local('PF-Encore-Sans-Pro-Bold'),
+        url('PFEncoreSansPro-Bold.woff2') format('woff2'),
+        url('PFEncoreSansPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  font-face {
+    font-family: 'PF Encore Sans Pro';
+    src: local('PF Encore Sans Pro Medium'), local('PF-Encore-Sans-Pro-Medium'),
+        url('PFEncoreSansPro-Medium.woff2') format('woff2'),
+        url('PFEncoreSansPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PF Encore Sans Pro';
+    src: local('PF Encore Sans Pro Thin'), local('PF-Encore-Sans-Pro-Thin'),
+        url('PFEncoreSansPro-Thin.woff2') format('woff2'),
+        url('PFEncoreSansPro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+  }
+// FONTS
+body {
+    font-family: "PF Encore Sans Pro", sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 24px;
+    color: #9e9898;
+}
+.h1 {
+
+}
+
+.h3 {
+    font-family: "PF Encore Sans Pro", sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    line-height: 24px;
+    color: #fc635e;
+    span {
+        color: #868686;
+    }
+}
+/* HEADER START */
+
+/* HEADER END */
+
+/* MAIN START */
+
+/* MAIN END */
+
+/* FOOTER START */
+
+/* FOOTER END */
+
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+/* @media */
+
+/* Laptops */
+@media only screen and (max-width: 1200px) {
+}
+/* Tablets, Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+/* Phones */
+@media only screen and (max-width: 575px) {
+}
+/* Extra Small Devices, old Phones */
+@media only screen and (max-width: 480px) {
+}
