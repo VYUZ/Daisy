@@ -1,4 +1,5 @@
-@import url(../node_modules/normalize.css/normalize.css);
+@import "../node_modules/normalize.css/normalize.css";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -13,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
 }
-
+@import url(../node_modules/normalize.css/normalize.css);
 img {
   max-width: 100%;
   height: auto;
@@ -106,14 +107,11 @@ h2 {
     color: #868686;
   }
 }
-.none {
-  flex: 1;
-}
 .circle-more-pink,
 .circle-more-light {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
+  margin: auto 0 25px 0;
 }
 .circle-more-pink_link,
 .circle-more-light_link {
@@ -141,7 +139,7 @@ h2 {
 .header {
   background: url(../img/background.png) no-repeat;
   background-size: cover;
-  min-height: 600px;
+  min-height: 765px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -217,6 +215,35 @@ h2 {
 }
 /* RECEIVE END */
 
+//boot
+.boot {
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+  margin: 50px auto;
+  padding: 50px 0;
+  text-align: center;
+  min-width: 400px;
+  min-height: 10vh;
+
+  .boot-div {
+    border: 1px solid maroon;
+  }
+
+  background-color: olive;
+  @media screen and (max-width: 992px) {
+    background-color: lime;
+  }
+  @media screen and (max-width: 768px) {
+    background-color: orchid;
+  }
+  @media screen and (max-width: 575 px) {
+    background-color: aqua;
+  }
+  @media screen and (max-width: 480px) {
+    background-color: tomato;
+  }
+}
 /* MAIN END */
 
 /* FOOTER START */

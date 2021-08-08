@@ -12,12 +12,15 @@ const uglify = require("gulp-uglify");
 const cssnano = require("gulp-cssnano");
 const sourcemaps = require("gulp-sourcemaps");
 
+// gulp.task("norm", function () {
+//   return gulp.src("node_modules/normalize-scss/sass/**/*.scss").pipe(gulp.dest("scss"));
+// });
 gulp.task("scss-compile", function () {
   return gulp
-    .src(["scss/**/*.sass", "scss/**/*.scss"])
+    .src(["scss/**/*.sass", "scss/*.scss"])
     .pipe(debug({ title: "src" }))
-	.pipe(sourcemaps.init())
-	.pipe(debug({ title: "sourcemaps" }))
+    .pipe(sourcemaps.init())
+    .pipe(debug({ title: "sourcemaps" }))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 2 versions", "> 5%"],
@@ -25,11 +28,11 @@ gulp.task("scss-compile", function () {
       })
     )
     .pipe(debug({ title: "autoprefixer" }))
-    .pipe(concat("style.css"))
-    .pipe(debug({ title: "concat" }))
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(debug({ title: "sass" }))
-	.pipe(sourcemaps.write())
+    .pipe(concat("style.css"))
+    .pipe(debug({ title: "concat" }))
+    .pipe(sourcemaps.write())
     .pipe(debug({ title: "sourcemaps" }))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.stream());
