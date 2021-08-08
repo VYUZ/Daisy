@@ -1,5 +1,5 @@
-@import "../node_modules/normalize.css/normalize.css";
-@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+ @import "../node_modules/normalize.css/normalize.css"; 
+ @import "../node_modules/bootstrap/scss/bootstrap-grid.scss"; 
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -215,7 +215,7 @@ h2 {
 }
 /* RECEIVE END */
 
-//boot
+/* boot */
 .boot {
   font-size: 50px;
   font-weight: bold;
@@ -244,6 +244,31 @@ h2 {
     background-color: tomato;
   }
 }
+/* flex */
+.container {
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 1rem;
+  
+}
+.item {
+  padding: 50px 20px;
+  font-size: 50px;
+  color: maroon;
+  text-align: center;
+  background: olive;
+  flex: 1 1 calc(100% / 12 * 3 - 30px);  
+
+  @media screen and (max-width: 1200px) {
+    flex: 1 1 calc(100% / 12 * 4 - 30px);
+  }
+  
+}
+
 /* MAIN END */
 
 /* FOOTER START */
@@ -273,4 +298,4 @@ h2 {
 }
 /* Extra Small Devices, old Phones */
 @media only screen and (max-width: 480px) {
-}
+} 
