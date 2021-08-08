@@ -10,11 +10,14 @@ const debug = require("gulp-debug");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const cssnano = require("gulp-cssnano");
+const sourcemaps = require("gulp-sourcemaps");
 
 gulp.task("scss-compile", function () {
   return gulp
     .src(["scss/**/*.sass", "scss/**/*.scss"])
     .pipe(debug({ title: "src" }))
+	.pipe(sourcemaps.init())
+	.pipe(debug({ title: "sourcemaps" }))
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 2 versions", "> 5%"],
@@ -22,10 +25,12 @@ gulp.task("scss-compile", function () {
       })
     )
     .pipe(debug({ title: "autoprefixer" }))
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-    .pipe(debug({ title: "sass" }))
     .pipe(concat("style.css"))
     .pipe(debug({ title: "concat" }))
+    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+    .pipe(debug({ title: "sass" }))
+	.pipe(sourcemaps.write())
+    .pipe(debug({ title: "sourcemaps" }))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.stream());
 });

@@ -1,3 +1,4 @@
+@import url(../node_modules/normalize.css/normalize.css);
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -10,72 +11,211 @@ html {
 }
 body {
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
-// FONTS
+a {
+  text-decoration: none;
+  color: white;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+/*  FONTS */
+
 @font-face {
-    font-family: 'Gotham Pro';
-    src: local('Gotham Pro Bold'), local('Gotham-Pro-Bold'),
-        url('../GothamPro-Bold.woff2') format('woff2'),
-        url('../GothamPro-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'PF Encore Sans Pro';
-    src: local('PF Encore Sans Pro Bold'), local('PF-Encore-Sans-Pro-Bold'),
-        url('PFEncoreSansPro-Bold.woff2') format('woff2'),
-        url('PFEncoreSansPro-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-  }
-  font-face {
-    font-family: 'PF Encore Sans Pro';
-    src: local('PF Encore Sans Pro Medium'), local('PF-Encore-Sans-Pro-Medium'),
-        url('PFEncoreSansPro-Medium.woff2') format('woff2'),
-        url('PFEncoreSansPro-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'PF Encore Sans Pro';
-    src: local('PF Encore Sans Pro Thin'), local('PF-Encore-Sans-Pro-Thin'),
-        url('PFEncoreSansPro-Thin.woff2') format('woff2'),
-        url('PFEncoreSansPro-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-  }
-// FONTS
+  font-family: "Gotham Pro";
+  src: local("Gotham Pro Bold"), local("Gotham-Pro-Bold"), url("../GothamPro-Bold.woff2") format("woff2"),
+    url("../GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Bold"), local("PF-Encore-Sans-Pro-Bold"),
+    url("PFEncoreSansPro-Bold.woff2") format("woff2"), url("PFEncoreSansPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Medium"), local("PF-Encore-Sans-Pro-Medium"),
+    url("PFEncoreSansPro-Medium.woff2") format("woff2"), url("PFEncoreSansPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PF Encore Sans Pro";
+  src: local("PF Encore Sans Pro Thin"), local("PF-Encore-Sans-Pro-Thin"),
+    url("PFEncoreSansPro-Thin.woff2") format("woff2"), url("PFEncoreSansPro-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+$pink: #fc635e;
+
 body {
-    font-family: "PF Encore Sans Pro", sans-serif;
-    font-weight: 100;
-    font-size: 15px;
-    line-height: 24px;
-    color: #9e9898;
+  font-family: "PF Encore Sans Pro", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 24px;
+  color: #9e9898;
 }
-.h1 {
-
+.wrapper1200,
+.wrapper940 {
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-.h3 {
-    font-family: "PF Encore Sans Pro", sans-serif;
-    font-weight: 100;
-    font-size: 28px;
-    line-height: 24px;
-    color: #fc635e;
-    span {
-        color: #868686;
-    }
+.wrapper1200 {
+  max-width: 1200px;
+}
+.wrapper940 {
+  max-width: 940px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+h1 {
+  font-family: "PF Encore Sans Pro", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  span {
+    color: $pink;
+  }
+}
+h2 {
+  font-family: "PF Encore Sans Pro", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 24px;
+  color: $pink;
+  border-bottom: 2px solid #adadad;
+  padding-bottom: 10px;
+  span {
+    color: #868686;
+  }
+}
+.none {
+  flex: 1;
+}
+.circle-more-pink,
+.circle-more-light {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.circle-more-pink_link,
+.circle-more-light_link {
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  transition: 0.5s;
+  &:hover {
+    transform: translateY(10px);
+  }
+}
+.circle-more-pink_link {
+  color: white;
+  background-color: $pink;
+}
+.circle-more-light_link {
+  color: $pink;
+  background-color: white;
 }
 /* HEADER START */
+.header {
+  background: url(../img/background.png) no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 200px;
+}
+.header__logo-link {
+  font-size: 24px;
+  font-weight: 500;
+  img {
+    padding-right: 15px;
+    vertical-align: middle;
+  }
+}
+.header__menu-list {
+  display: flex;
+}
+.header__menu-item {
+  margin-left: 45px;
+}
+.header__menu-link {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+  &:hover {
+    color: $pink;
+    border-bottom: 1px solid $pink;
+    padding-bottom: 3px;
+  }
+}
+.header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__text-title {
+  color: white;
+  margin-bottom: 20px;
+  span {
+    color: $pink;
+  }
+}
+.header__text-desc {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.header__text-iwant {
+  color: $pink;
+  font-size: 24px;
+  border: 2px solid $pink;
+  padding: 12px 32px;
+  border-radius: 10px;
+  &:hover {
+    background-color: $pink;
+    color: white;
+  }
+}
 
 /* HEADER END */
 
 /* MAIN START */
+/* RECEIVE START */
+
+.receive {
+  padding: 65px 0 15px 0;
+}
+/* RECEIVE END */
 
 /* MAIN END */
 
