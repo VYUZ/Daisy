@@ -15,7 +15,7 @@ browsersync.bat
 src/
 
 # local fonts not needed, i use google fonts
-fonts/
+#fonts/
 
 #gulp npm mods
 node_modules/

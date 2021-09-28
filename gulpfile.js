@@ -11,6 +11,11 @@ const gulpIf = require("gulp-if");
 const debug = require("gulp-debug");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
+const babel = require("gulp-babel");
+const changed = require("gulp-changed");
+const imagemin = require("gulp-imagemin");
+const imgCompress = require("imagemin-jpeg-recompress");
+const imageminPngquant = require("imagemin-pngquant");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
@@ -52,7 +57,7 @@ gulp.task("serve", function () {
   });
 });
 
-gulp.task("clean", function () {
+gulp.task("clean", async function () {
   return del.sync("build");
   //return del('build');
 });
@@ -112,14 +117,14 @@ gulp.task("minimg", function () {
           optimizationLevel: 5,
         },
         [
-          recompress({
-            loops: 6,
-            min: 50,
-            max: 90,
+          imgCompress({
+            loops: 4,
+            min: 70,
+            max: 80,
             quality: "high",
             use: [
-              pngquant({
-                quality: [0.8, 1],
+              imageminPngquant({
+                quality: [0.6, 0.8],
                 strip: true,
                 speed: 1,
               }),
@@ -132,7 +137,7 @@ gulp.task("minimg", function () {
       )
     )
     .pipe(debug({ title: "imagemin" }))
-    .pipe(dest("build/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("prebuild", async function () {
