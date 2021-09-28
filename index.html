@@ -9,26 +9,21 @@
     <meta name="description" content=" " />
     <meta name="keywords" content=" " />
     <title>Daisy</title>
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" /> -->
-    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
-    <!-- <link rel="stylesheet" href="./node_modules/normalize.css/"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./css/style.css" as="style" />
-    <!-- CSS only -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    /> -->
-    <!-- <link rel="stylesheet" href="./node_modules/bootstrap/scss/bootstrap.scss" /> -->
-    <!-- <link rel="stylesheet" href="./node_modules/normalize-scss/sass/_normalize.scss" /> -->
     <!-- <link rel="stylesheet" href="./css/style.min.css" as="style" /> -->
-    <!-- <link rel="stylesheet" href="./css/flexboxgrid2.min.css" /> -->
-    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" /> -->
-    <link rel="icon" type="image/png" href="./img/icons/64x64.png" />
-    <!-- <link rel="manifest" href="./manifest.json" /> -->
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../node_modules/mixitup/dist/mixitup.min.js"></script>
+    <script src="js/script.js" type="module"></script>
   </head>
 
   <body>
@@ -57,7 +52,7 @@
       <!--RECEIVE SECTION START-->
 
       <section id="receive" class="receive wrapper940">
-        <h2 class="receive__title" href="#clients"><span>What can </span>you receive?</h2>
+        <h2 class="receive__title border-title" href="#clients"><span>What can </span>you receive?</h2>
         <p class="receive__desc">
           Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
           accumsan ipsum
@@ -110,22 +105,48 @@
       <!--EXPAND SECTION END-->
       <!--PROCESS SECTION START-->
       <section id="process" class="wrapper940">
-        <h2 class="process__title">our <span>process</span></h2>
+        <h2 class="process__title border-title">our <span>process</span></h2>
         <p class="process__desc">
           Daisy is sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
           accumsan ipsum
         </p>
-        <img src="./img/Our_process.png" alt="" />
+        <img class="process__img" src="./img/Our_process.png" alt="" />
+        <ul class="process__steps">
+          <li class="process_step">
+            <h3 class="process__step-title">step1</h3>
+            <p class="process__step-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perferendis!
+            </p>
+          </li>
+          <li class="process_step">
+            <h3 class="process__step-title">step2</h3>
+            <p class="process__step-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perferendis!
+            </p>
+          </li>
+          <li class="process_step">
+            <h3 class="process__step-title">step3</h3>
+            <p class="process__step-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perferendis!
+            </p>
+          </li>
+          <li class="process_step">
+            <h3 class="process__step-title">step4</h3>
+            <p class="process__step-desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perferendis!
+            </p>
+          </li>
+        </ul>
         <div class="circle-more-light"><a href="#!" class="circle-more-light_link">&darr;</a></div>
       </section>
       <!--PROCESS SECTION END-->
       <!--DOWE SECTION START-->
       <section id="dowe" class="wrapper1200">
-        <h2 class="dowe__title"><span>what do</span> we do?</h2>
-        <article class="dowe__pages dowe__pages-grey">
-          <div class="pages__card card wrapper940">
+        <h2 class="dowe__title border-title"><span>what do</span> we do?</h2>
+        <article class="dowe__pages grey">
+          <div class="pages__card dowe-card wrapper940">
             <div class="card__text">
-              <h3 class="card__title">Landing Pages</h3>
+              <h3 class="card__title card__title-left">Landing Pages</h3>
               <p class="card__desc">
                 This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
                 sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
@@ -133,22 +154,42 @@
               </p>
               <a href="#!" class="card__link pink-link">More details</a>
             </div>
-            <div class="card__img"></div>
+            <div class="card__img">&nbsp</div>
           </div>
           <div class="circle-more-light">
             <a href="#!" class="circle-more-light_link">&darr;</a>
           </div>
         </article>
-        <article class="pages pages-white">
-          <div class="article__text"></div>
-          <article__img></article__img>
+        <article class="dowe__adv">
+          <div class="adv__card dowe-card wrapper940">
+            <div class="card__text text-right">
+              <h3 class="card__title card__title-right">advertising</h3>
+              <p class="card__desc">
+                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Na
+              </p>
+              <a href="#!" class="card__link pink-link">More details</a>
+            </div>
+            <div class="card__img">&nbsp</div>
+          </div>
           <div class="circle-more-light">
             <a href="#!" class="circle-more-light_link">&darr;</a>
           </div>
         </article>
-        <article class="pages pages-grey">
-          <div class="article__text"></div>
-          <article__img></article__img>
+        <article class="dowe__marketing grey">
+          <div class="marketing__card dowe-card wrapper940">
+            <div class="card__text">
+              <h3 class="card__title card__title-left">marketing kit</h3>
+              <p class="card__desc">
+                This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Na
+              </p>
+              <a href="#!" class="card__link pink-link">More details</a>
+            </div>
+            <div class="card__img">&nbsp</div>
+          </div>
           <div class="circle-more-light">
             <a href="#!" class="circle-more-light_link">&darr;</a>
           </div>
@@ -156,15 +197,147 @@
       </section>
       <!--DOWE SECTION END-->
       <!--PORTFOLIO SECTION START-->
+      <section id="portfolio" class="portfolio wrapper940">
+        <h2 class="portfolio__title border-title"><span>portfolio</span></h2>
+        <ul class="portfolio__filter-list">
+          <li><button class="portfolio__filter-item" type="button" data-filter="all">all</button></li>
+          <li>/</li>
+          <li>
+            <button class="portfolio__filter-item" type="button" data-filter=".category-et">entertaintment</button>
+          </li>
+          <li>/</li>
+          <li><button class="portfolio__filter-item" type="button" data-filter=".category-st">sport</button></li>
+          <li>/</li>
+          <li><button class="portfolio__filter-item" type="button" data-filter=".category-bs">business</button></li>
+          <li>/</li>
+          <li><button class="portfolio__filter-item" type="button" data-filter=".category-bg">building</button></li>
+        </ul>
+        <ul class="portfolio__images">
+          <li class="portfolio__image mix category-et" id="ex1">
+            <p class="portfolio_text">entertaintment 1</p>
+          </li>
+          <li class="portfolio__image mix category-bs" id="ex2">
+            <p class="portfolio_text">business 1</p>
+          </li>
+          <li class="portfolio__image mix category-st" id="ex3">
+            <p class="portfolio_text">sport 1</p>
+          </li>
+          <li class="portfolio__image mix category-bg" id="ex4">
+            <p class="portfolio_text">building</p>
+          </li>
+          <li class="portfolio__image mix category-st" id="ex5">
+            <p class="portfolio_text">sport 2</p>
+          </li>
+          <li class="portfolio__image mix category-bs" id="ex6">
+            <p class="portfolio_text">business 2</p>
+          </li>
+          <li class="portfolio__image mix category-et" id="ex1">
+            <p class="portfolio_text">entertaintment 2</p>
+          </li>
+          <li class="portfolio__image mix category-bs" id="ex2">
+            <p class="portfolio_text">business 3</p>
+          </li>
+          <li class="portfolio__image mix category-st" id="ex3">
+            <p class="portfolio_text">sport 3</p>
+          </li>
+        </ul>
+        <a href="#!" class="portfolio__link pink-link">I want landing page</a>
+        <div class="circle-more-light">
+          <a href="#!" class="circle-more-light_link">&darr;</a>
+        </div>
+      </section>
       <!--PORTFOLIO SECTION END-->
+      <!--TEAM SECTION START-->
+      <section class="team grey">
+        <div class="wrapper940">
+          <h2 class="team__title border-title"><span>our</span> team</h2>
+          <ul class="team__list">
+            <li class="team__item team-card">
+              <figure class="team-card__figure">
+                <img src="./img/team/marketing.png" alt="" class="team-card__img" />
+                <p class="team-card__title">Tomothy <span>Bowman</span></p>
+                <span class="team-card__desc">Marketing</span>
+              </figure>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="team__item team-card">
+              <figure class="team-card__figure">
+                <img src="./img/team/ceo.png" alt="" class="team-card__img" />
+                <p class="team-card__title">Steve <span>Tracy</span></p>
+                <span class="team-card__desc">CEO</span>
+              </figure>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="team__item team-card">
+              <figure class="team-card__figure">
+                <img src="./img/team/clients.png" alt="" class="team-card__img" />
+                <p class="team-card__title">Helen <span>Johns</span></p>
+                <span class="team-card__desc">Clients</span>
+              </figure>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#!" class="team__social-link">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--TEAM SECTION END-->
     </main>
     <!--MAIN SECTION END-->
 
     <!--FOOTER SECTION START-->
 
     <!--FOOTER SECTION END-->
-
-    <script src="./js/main.js" type="module"></script>
-    <!-- <script src="./js/main.min.js" type="module"></script> -->
+    
   </body>
 </html>
