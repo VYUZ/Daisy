@@ -20,6 +20,8 @@ const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
 const isDevelopment = true; //true - write sourcemaps, false - no sourcemaps - изменить для продакшна
+const ghPages = require('gh-pages');
+const path = require('path');
 //копируем нормалайз себе в рабочую папку
 // gulp.task("norm", function () {return gulp.src("node_modules/normalize-scss/sass/**/*.scss").pipe(gulp.dest("scss")); });
 gulp.task("sass", function () {
@@ -145,6 +147,12 @@ gulp.task("prebuild", async function () {
     .src("fonts/**/*") // Переносим шрифты в продакшен
     .pipe(gulp.dest("build/fonts"));
 });
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
+
 
 gulp.task("watch", function () {
   gulp.watch(["scss/**/*.sass", "scss/**/*.scss"], gulp.parallel("sass"));
