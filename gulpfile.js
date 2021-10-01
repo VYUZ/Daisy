@@ -19,7 +19,7 @@ const imageminPngquant = require("imagemin-pngquant");
 const sourcemaps = require("gulp-sourcemaps");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
-const isDevelopment = true; //true - write sourcemaps, false - no sourcemaps - изменить для продакшна
+const isDevelopment = false; //true - write sourcemaps, false - no sourcemaps - изменить для продакшна
 const ghPages = require('gh-pages');
 const path = require('path');
 //копируем нормалайз себе в рабочую папку
