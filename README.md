@@ -15,7 +15,8 @@ git pages on <b>gh-pages branch</b>
 npm gulp
 
 gulpfile.js
-const gulp = require("gulp");
+<code>
+  const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
@@ -178,4 +179,4 @@ gulp.task("watch", function () {
 });
 gulp.task("default", gulp.parallel("serve", "sass", "scripts", "watch"));
 gulp.task("build", gulp.series("prebuild", "clean", "mincss", "minjs", "minhtml", "minimg"));
-
+</code>
